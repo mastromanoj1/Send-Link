@@ -42,7 +42,7 @@ const PhoneForm = () => {
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit" block>
-            Submit
+            Send Link
           </Button>
         </Form.Item>
       </Form>
