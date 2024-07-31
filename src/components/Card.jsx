@@ -1,8 +1,36 @@
 import React from 'react';
 import { Form, Input, Button, Card } from 'antd';
+import { useLocation } from 'react-router-dom';
 
-const PhoneForm = () => {
+
+
+
+export const WonderlaForm = () => {
   const phoneNumberRegex = /^[0-9]{10}$/;
+  const location = useLocation();
+
+  console.log(location.pathname)
+
+  // const initialValues = {
+  //   text: "Happy to see your interest in booking Wonderla tickets. Do fill this below google form for further assistance.  \n\n https://docs.google.com/forms/d/e/1FAIpQLSfmmrCV61wqMJWyicCAxrU8sydkh1WMQcZCCwwfpjhemRhLvg/viewform?usp=sf_link",
+  // };
+
+  let  initialValues  = {};
+
+
+  switch (location.pathname) {
+    case '/wonderla':
+      initialValues.text = "🎢 Happy to see your interest in booking Wonderla tickets. Do fill this below google form for further assistance.  \n\n https://docs.google.com/forms/d/e/1FAIpQLSfmmrCV61wqMJWyicCAxrU8sydkh1WMQcZCCwwfpjhemRhLvg/viewform?usp=sf_link"
+      break;
+    case '/bus' :
+      initialValues.text = "Welcome to Jolly Tours and Travels. Do fill the below Bus Enquiry Form \n\n "
+      break;
+    case '/tour' :
+      initialValues.text = "Welcome to Jolly Tours and Travels. Do fill the below Tour Enquiry Form \n\n "
+      break;
+  default:
+      break;
+  }
 
 
   const onFinish = (values) => {
@@ -11,9 +39,7 @@ const PhoneForm = () => {
     window.location.href = whatsappUrl;
   };
 
-  const initialValues = {
-    text: "Happy to see your interest in booking Wonderla tickets. Do fill this below google form for further assistance.  \n\n https://docs.google.com/forms/d/e/1FAIpQLSfmmrCV61wqMJWyicCAxrU8sydkh1WMQcZCCwwfpjhemRhLvg/viewform?usp=sf_link",
-  };
+ 
 
   return (
     <Card title="Contact Form" style={{ maxWidth: 400, margin: 'auto', marginTop: '50px' }}>
@@ -48,6 +74,9 @@ const PhoneForm = () => {
       </Form>
     </Card>
   );
-};
+}
 
-export default PhoneForm;
+
+
+
+
