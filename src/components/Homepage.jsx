@@ -8,7 +8,8 @@ const Homepage = () => {
     const navigate = useNavigate()
   return (
     <>
-    <h2> Jolly Tours and Travels</h2>
+    <h2> Jolly Tours and Travels </h2>
+    <h6> Erode</h6>
     <ul>
         <li style={{marginBottom : "10px"}}>  <Button type='primary' onClick={() => navigate('/wonderla') }> Wonderla Enquiry </Button>   </li>
         <li style={{marginBottom : "10px"}}>  <Button type='primary' onClick={() => navigate('/silverstorm') }> Silver Storm Enquiry </Button>  </li>
