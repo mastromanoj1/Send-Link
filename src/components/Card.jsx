@@ -23,10 +23,10 @@ export const WonderlaForm = () => {
       initialValues.text = "🎢 Happy to see your interest in booking Wonderla tickets. Do fill this below google form for further assistance.  \n\n https://docs.google.com/forms/d/e/1FAIpQLSfmmrCV61wqMJWyicCAxrU8sydkh1WMQcZCCwwfpjhemRhLvg/viewform?usp=sf_link"
       break;
     case '/bus' :
-      initialValues.text = "Welcome to Jolly Tours and Travels. Do fill the below Bus Enquiry Form \n\n "
+      initialValues.text = "🙏 Welcome to Jolly Tours and Travels. Do fill the below Bus Enquiry Form \n\n "
       break;
     case '/tour' :
-      initialValues.text = "Welcome to Jolly Tours and Travels. Do fill the below Tour Enquiry Form \n\n "
+      initialValues.text = "🙏 Welcome to Jolly Tours and Travels. Do fill the below Tour Enquiry Form \n\n "
       break;
   default:
       break;
