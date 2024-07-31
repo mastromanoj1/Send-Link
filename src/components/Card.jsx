@@ -35,7 +35,7 @@ export const WonderlaForm = () => {
 
   const onFinish = (values) => {
     const { phone, text } = values;
-    const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+    const whatsappUrl = `https://wa.me/91${phone}?text=${encodeURIComponent(text)}`;
     window.location.href = whatsappUrl;
   };
 
